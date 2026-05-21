@@ -79,6 +79,8 @@ module ActiveSupport
         rescue Errno::ECHILD
           nil
         end
+
+        DRb.stop_service
       end
     end
   end
